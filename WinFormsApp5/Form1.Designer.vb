@@ -22,10 +22,63 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "Form1"
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
+        Button1 = New Button()
+        CheckBox1 = New CheckBox()
+        Label1 = New Label()
+        TextBox1 = New TextBox()
+        TextBox2 = New TextBox()
+        SuspendLayout()
+        ' 
+        ' Button1
+        ' 
+        Button1.BackgroundImage = My.Resources.Resources._6921087_ai
+        resources.ApplyResources(Button1, "Button1")
+        Button1.ForeColor = Color.Brown
+        Button1.Name = "Button1"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' CheckBox1
+        ' 
+        resources.ApplyResources(CheckBox1, "CheckBox1")
+        CheckBox1.BackColor = Color.Transparent
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.UseVisualStyleBackColor = False
+        ' 
+        ' Label1
+        ' 
+        resources.ApplyResources(Label1, "Label1")
+        Label1.ForeColor = Color.IndianRed
+        Label1.Name = "Label1"
+        ' 
+        ' TextBox1
+        ' 
+        resources.ApplyResources(TextBox1, "TextBox1")
+        TextBox1.Name = "TextBox1"
+        ' 
+        ' TextBox2
+        ' 
+        resources.ApplyResources(TextBox2, "TextBox2")
+        TextBox2.Name = "TextBox2"
+        ' 
+        ' Form1
+        ' 
+        resources.ApplyResources(Me, "$this")
+        AutoScaleMode = AutoScaleMode.Font
+        Controls.Add(TextBox2)
+        Controls.Add(TextBox1)
+        Controls.Add(Label1)
+        Controls.Add(CheckBox1)
+        Controls.Add(Button1)
+        DoubleBuffered = True
+        Name = "Form1"
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
+    Friend WithEvents Button1 As Button
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
 End Class
